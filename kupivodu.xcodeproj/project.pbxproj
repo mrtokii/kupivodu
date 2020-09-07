@@ -45,6 +45,9 @@
 		D7CB33772506CCCC004F36DB /* ArchiveHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33762506CCCC004F36DB /* ArchiveHelper.swift */; };
 		D7CB337A2506CE3F004F36DB /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB33792506CE3F004F36DB /* Zip */; };
 		D7CB337D2506D9B3004F36DB /* KVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB337C2506D9B3004F36DB /* KVError.swift */; };
+		D7CB337F2506DD87004F36DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7CB337E2506DD87004F36DB /* Localizable.strings */; };
+		D7CB33822506DDD9004F36DB /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33812506DDD9004F36DB /* String+Localization.swift */; };
+		D7CB338E2506E1CF004F36DB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB338D2506E1CF004F36DB /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		D7CB33722506CC66004F36DB /* HouseInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseInfoService.swift; sourceTree = "<group>"; };
 		D7CB33762506CCCC004F36DB /* ArchiveHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveHelper.swift; sourceTree = "<group>"; };
 		D7CB337C2506D9B3004F36DB /* KVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVError.swift; sourceTree = "<group>"; };
+		D7CB337E2506DD87004F36DB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D7CB33812506DDD9004F36DB /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
+		D7CB338D2506E1CF004F36DB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 		D7CB32EF250696E3004F36DB /* kupivodu */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB338B2506E1BB004F36DB /* Extensions */,
 				D7CB331525069979004F36DB /* ApplicationLayer */,
 				D7CB330F25069938004F36DB /* PresentationLayer */,
 				D7CB331025069943004F36DB /* ModelsLayer */,
@@ -170,9 +177,11 @@
 		D7CB331325069962004F36DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33802506DDAB004F36DB /* Extensions */,
 				D7CB32FC250696E7004F36DB /* Assets.xcassets */,
 				D7CB32FE250696E7004F36DB /* LaunchScreen.storyboard */,
 				D7CB3301250696E7004F36DB /* Info.plist */,
+				D7CB337E2506DD87004F36DB /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -455,6 +464,30 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		D7CB33802506DDAB004F36DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33812506DDD9004F36DB /* String+Localization.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7CB338B2506E1BB004F36DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB338C2506E1C4004F36DB /* Swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7CB338C2506E1C4004F36DB /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB338D2506E1CF004F36DB /* String+Extensions.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7CB3300250696E7004F36DB /* LaunchScreen.storyboard in Resources */,
+				D7CB337F2506DD87004F36DB /* Localizable.strings in Resources */,
 				D7CB32FD250696E7004F36DB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +582,8 @@
 				D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */,
 				D7CB332025069C80004F36DB /* HouseListModuleAssembly.swift in Sources */,
 				D7CB33702506C7E9004F36DB /* HouseListEndpoint.swift in Sources */,
+				D7CB338E2506E1CF004F36DB /* String+Extensions.swift in Sources */,
+				D7CB33822506DDD9004F36DB /* String+Localization.swift in Sources */,
 				D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */,
 				D7CB33552506C38A004F36DB /* NetworkError.swift in Sources */,
 				D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */,

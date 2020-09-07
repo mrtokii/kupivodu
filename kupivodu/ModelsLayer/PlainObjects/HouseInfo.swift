@@ -7,16 +7,7 @@
 //
 
 final class HouseInfo: Codable {
-    
-    enum CodingKeys: String, CodingKey {
-        case city = "Населенный пункт"
-        case address = "Адрес жилого здания"
-        case building = "№ дома"
-        case part = "корпус"
-        case letter = "литер"
-        case period = "Период отключения ГВС"
-    }
-    
+ 
     let city: String
     let address: String
     let building: String
@@ -31,6 +22,20 @@ final class HouseInfo: Codable {
         self.part = part
         self.letter = letter
         self.period = period
+    }
+}
+
+// MARK: - CodingKeys
+
+extension HouseInfo {
+    
+    enum CodingKeys: String, CodingKey {
+        case city = "Населенный пункт"
+        case address = "Адрес жилого здания"
+        case building = "№ дома"
+        case part = "корпус"
+        case letter = "литер"
+        case period = "Период отключения ГВС"
     }
 }
 

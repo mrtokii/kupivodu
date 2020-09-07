@@ -34,7 +34,7 @@ final class ArchiveHelper {
             return nil
         }
         
-        let filePath = path.appendingPathComponent("temp.zip")
+        let filePath = path.appendingPathComponent(.tempArchiveFileName)
         
         do {
             try data.write(to: filePath)
@@ -50,4 +50,11 @@ final class ArchiveHelper {
             return nil
         }
     }
+}
+
+// MARK: - Constants
+
+private extension String {
+    
+    static let tempArchiveFileName = "temp.zip"
 }

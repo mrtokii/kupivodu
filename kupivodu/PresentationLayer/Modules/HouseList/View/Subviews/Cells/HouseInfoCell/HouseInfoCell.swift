@@ -37,7 +37,7 @@ final class HouseInfoCell: UITableViewCell {
         cityLabel.text = model.city.withoutWhitespace
         streetLabel.text = model.address.withoutWhitespace
         addressLabel.text = model.buildingAddress
-        periodLabel.text = model.period
+        periodLabel.text = model.formattedPeriod ?? model.period
     }
     
     // MARK: - Private Methods

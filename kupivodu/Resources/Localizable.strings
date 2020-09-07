@@ -9,3 +9,4 @@
 "house_info_building" = "дом %@";
 "house_info_part" = "корпус %@";
 "house_info_letter" = "литер %@";
+"house_info_period_format" = "%@ - %@";

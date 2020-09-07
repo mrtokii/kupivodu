@@ -20,11 +20,38 @@ extension HouseInfo {
             $0
         }.joined(separator: .space)
     }
+    
+    var formattedPeriod: String? {
+        
+        // Source string: "01.01.2020-01.01.2020"
+        
+        let datesArray = period.split(separator: .init(.dash)).map { String($0) }
+        
+        guard datesArray.count == 2 else {
+            return nil
+        }
+        
+        let startDateString = datesArray[0]
+        let endDateString = datesArray[1]
+        
+        guard
+            let startDateProcessed = startDateString.convertedDate,
+            let endDateProcessed = endDateString.convertedDate
+        else {
+            return nil
+        }
+        
+        return String(format: .houseInfoPeriodFormat, startDateProcessed, endDateProcessed)
+    }
 }
 
 // MARK: - Helpers
 
 private extension String {
+    
+    var convertedDate: String? {
+        convert(from: .sourceDateFormat, to: .defaultDateFormat)
+    }
     
     func formattedIfNotEmpty(with format: String) -> String? {
         
@@ -32,4 +59,11 @@ private extension String {
             ? nil
             : String(format: format, self)
     }
+}
+
+// MARK: - Constants
+
+private extension String {
+    
+    static let sourceDateFormat = "dd.MM.yyyy"
 }

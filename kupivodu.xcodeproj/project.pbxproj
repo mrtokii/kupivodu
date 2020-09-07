@@ -54,6 +54,7 @@
 		D7CB33992506E564004F36DB /* UILabel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33982506E564004F36DB /* UILabel+Factory.swift */; };
 		D7CB339B2506E5D9004F36DB /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB339A2506E5D9004F36DB /* UIFont+Extensions.swift */; };
 		D7CB33A12506E95A004F36DB /* HouseInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */; };
+		D7CB33A72506ED21004F36DB /* KVDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33A62506ED21004F36DB /* KVDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		D7CB33982506E564004F36DB /* UILabel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Factory.swift"; sourceTree = "<group>"; };
 		D7CB339A2506E5D9004F36DB /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HouseInfo+Extensions.swift"; sourceTree = "<group>"; };
+		D7CB33A62506ED21004F36DB /* KVDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +460,7 @@
 		D7CB33742506CCB3004F36DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33A22506EC4C004F36DB /* Formatters */,
 				D7CB33752506CCBD004F36DB /* ArchiveHelper */,
 			);
 			path = Helpers;
@@ -552,6 +555,22 @@
 				D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */,
 			);
 			path = PlainObjects;
+			sourceTree = "<group>";
+		};
+		D7CB33A22506EC4C004F36DB /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33A32506EC57004F36DB /* DateFormatter */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		D7CB33A32506EC57004F36DB /* DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33A62506ED21004F36DB /* KVDateFormatter.swift */,
+			);
+			path = DateFormatter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -667,6 +686,7 @@
 				D7CB33562506C38A004F36DB /* HTTPTask.swift in Sources */,
 				D7CB33732506CC66004F36DB /* HouseInfoService.swift in Sources */,
 				D7CB336B2506C3A5004F36DB /* BaseNetworkResponseValidator.swift in Sources */,
+				D7CB33A72506ED21004F36DB /* KVDateFormatter.swift in Sources */,
 				D7CB335D2506C38A004F36DB /* ResponseDecoder.swift in Sources */,
 				D7CB33362506A3F8004F36DB /* HouseList.swift in Sources */,
 				D7CB335B2506C38A004F36DB /* JSONResponseDecoder.swift in Sources */,

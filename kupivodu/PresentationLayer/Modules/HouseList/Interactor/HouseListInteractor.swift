@@ -16,31 +16,22 @@ enum TestError: Error {
 
 final class HouseListInteractor {
     
-    private let stateRelay = BehaviorRelay<HouseListInteractorState>(value: .remote(.init(houses: [])))
+    private let stateRelay = BehaviorRelay<HouseListInteractorState>(value: .remote(.init(houses: [
+        .init(address: "Addr1"),
+        .init(address: "Arrd2")
+    ])))
 }
 
 extension HouseListInteractor: HouseListInteractorInput {
     
-    func test() {
-        if case .loading = stateRelay.value {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                self.stateRelay.accept(.remote(.init(houses: [
-                    .init(address: "Addr1"),
-                    .init(address: "Arrd2")
-                ])))
-            }
-        }
+    func reload() {
         
-        if case .remote = stateRelay.value {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                self.stateRelay.accept(.error(TestError.test))
-            }
-        }
-        
-        if case .error = stateRelay.value {
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                self.stateRelay.accept(.loading)
-            }
+        stateRelay.accept(.loading)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+            self.stateRelay.accept(.remote(.init(houses: [
+                .init(address: "Addr1"),
+                .init(address: "Arrd3")
+            ])))
         }
     }
 }

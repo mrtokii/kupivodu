@@ -14,13 +14,12 @@ import RxCocoa
 final class HouseListViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
+
+    private let tableView = UITableView()
+    private let refreshControl = UIRefreshControl()
+    private let loadingView = LoadingView()
     
-    private let loadingLabel = UILabel()
-    private let errorLabel = UILabel()
-    private let listLabel = UILabel()
-    private let button = UIButton()
-    
-    private let stack = UIStackView()
+    private var dataSource: [HouseInfo] = []
     
     // MARK: - Module Setup
     
@@ -30,25 +29,20 @@ final class HouseListViewController: UIViewController {
     private func bindPresenter(_ output: HouseListPresenterOutput) {
         
         output.loadingDriver
-            .map { $0 ? "loading" : "not loading" }
-            .drive(onNext: { [weak self] in
-                self?.loadingLabel.text = $0
-            })
+            .map { !$0 }
+            .drive(loadingView.rx.isHidden)
             .disposed(by: disposeBag)
         
         output.errorDriver
-            .drive(onNext: { [weak self] in
-                if let text = $0 {
-                    self?.errorLabel.text = text
-                } else {
-                    self?.errorLabel.text = "no error"
-                }
+            .drive(onNext: { [weak self] _ in
+                //
             })
             .disposed(by: disposeBag)
         
         output.houseListDriver
             .drive(onNext: { [weak self] list in
-                self?.listLabel.text = list.map { $0.address }.joined(separator: "/")
+                self?.dataSource = list
+                self?.updateTable()
             })
             .disposed(by: disposeBag)
     }
@@ -58,31 +52,71 @@ final class HouseListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(stack)
-        
-        stack.addArrangedSubview(loadingLabel)
-        stack.addArrangedSubview(errorLabel)
-        stack.addArrangedSubview(listLabel)
-        stack.addArrangedSubview(button)
-        
-        stack.axis = .vertical
-        
-        stack.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().inset(24)
-            make.centerY.equalToSuperview()
-        }
-        
-        button.setTitle("test", for: .normal)
-        button.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
+        setupTableView()
+        setupUI()
+        updateTable()
         
         if let presenter = presenterOutput {
             bindPresenter(presenter)
         }
-        
-        view.backgroundColor = .yellow
     }
     
-    @objc private func buttonPress() {
-        actionInput?.test()
+    private func setupUI() {
+        
+        view.backgroundColor = .white
+        view.addSubview(tableView)
+        view.addSubview(loadingView)
+        
+        tableView.separatorStyle = .none
+        
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        loadingView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
+        refreshControl.addTarget(self, action: #selector(reload), for: .valueChanged)
     }
+    
+    private func setupTableView() {
+        tableView.refreshControl = refreshControl
+        tableView.dataSource = self
+        tableView.register(HouseInfoCell.self, forCellReuseIdentifier: Constants.houseCellId)
+    }
+    
+    private func updateTable() {
+        tableView.reloadData()
+    }
+    
+    @objc private func reload() {
+        actionInput?.reload()
+        refreshControl.endRefreshing()
+    }
+}
+
+extension HouseListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.houseCellId) else {
+            return UITableViewCell()
+        }
+        
+        cell.textLabel?.text = dataSource[indexPath.row].address
+        
+        return cell
+    }
+}
+
+// MARK: - Constants
+
+private enum Constants {
+    
+    static let houseCellId = String(describing: HouseInfoCell.self)
 }

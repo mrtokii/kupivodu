@@ -10,7 +10,7 @@ import RxSwift
 
 protocol HouseListInteractorInput {
     
-    func test()
+    func reload()
 }
 
 protocol HouseListInteractorOutput {

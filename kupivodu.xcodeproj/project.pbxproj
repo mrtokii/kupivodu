@@ -23,6 +23,8 @@
 		D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332E2506A2C6004F36DB /* HouseListInteractorState.swift */; };
 		D7CB33332506A373004F36DB /* HouseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33322506A373004F36DB /* HouseInfo.swift */; };
 		D7CB33362506A3F8004F36DB /* HouseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33352506A3F8004F36DB /* HouseList.swift */; };
+		D7CB333B2506B48F004F36DB /* HouseInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB333A2506B48F004F36DB /* HouseInfoCell.swift */; };
+		D7CB333E2506C012004F36DB /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB333D2506C012004F36DB /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		D7CB332E2506A2C6004F36DB /* HouseListInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListInteractorState.swift; sourceTree = "<group>"; };
 		D7CB33322506A373004F36DB /* HouseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseInfo.swift; sourceTree = "<group>"; };
 		D7CB33352506A3F8004F36DB /* HouseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseList.swift; sourceTree = "<group>"; };
+		D7CB333A2506B48F004F36DB /* HouseInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseInfoCell.swift; sourceTree = "<group>"; };
+		D7CB333D2506C012004F36DB /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,7 @@
 		D7CB331C25069C58004F36DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33372506B462004F36DB /* Subviews */,
 				D7CB332525069CE1004F36DB /* HouseListViewController.swift */,
 			);
 			path = View;
@@ -212,6 +217,39 @@
 				D7CB33352506A3F8004F36DB /* HouseList.swift */,
 			);
 			path = Submodels;
+			sourceTree = "<group>";
+		};
+		D7CB33372506B462004F36DB /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB333C2506C002004F36DB /* LoadingView */,
+				D7CB33382506B46E004F36DB /* Cells */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		D7CB33382506B46E004F36DB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33392506B47D004F36DB /* HouseInfoCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D7CB33392506B47D004F36DB /* HouseInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB333A2506B48F004F36DB /* HouseInfoCell.swift */,
+			);
+			path = HouseInfoCell;
+			sourceTree = "<group>";
+		};
+		D7CB333C2506C002004F36DB /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB333D2506C012004F36DB /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +333,7 @@
 			files = (
 				D7CB33332506A373004F36DB /* HouseInfo.swift in Sources */,
 				D7CB32FB250696E3004F36DB /* kupivodu.xcdatamodeld in Sources */,
+				D7CB333B2506B48F004F36DB /* HouseInfoCell.swift in Sources */,
 				D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */,
 				D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */,
 				D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */,
@@ -303,6 +342,7 @@
 				D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */,
 				D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */,
 				D7CB33362506A3F8004F36DB /* HouseList.swift in Sources */,
+				D7CB333E2506C012004F36DB /* LoadingView.swift in Sources */,
 				D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

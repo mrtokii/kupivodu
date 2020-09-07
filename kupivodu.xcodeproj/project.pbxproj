@@ -3,29 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F0250696E3004F36DB /* AppDelegate.swift */; };
-		D7CB32F3250696E3004F36DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F2250696E3004F36DB /* SceneDelegate.swift */; };
-		D7CB32F5250696E3004F36DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F4250696E3004F36DB /* ViewController.swift */; };
-		D7CB32F8250696E3004F36DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7CB32F6250696E3004F36DB /* Main.storyboard */; };
 		D7CB32FB250696E3004F36DB /* kupivodu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F9250696E3004F36DB /* kupivodu.xcdatamodeld */; };
 		D7CB32FD250696E7004F36DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CB32FC250696E7004F36DB /* Assets.xcassets */; };
 		D7CB3300250696E7004F36DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7CB32FE250696E7004F36DB /* LaunchScreen.storyboard */; };
+		D7CB3309250697E8004F36DB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB3308250697E8004F36DB /* RxSwift */; };
+		D7CB330B250697E8004F36DB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB330A250697E8004F36DB /* RxCocoa */; };
+		D7CB330E25069816004F36DB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D7CB330D25069816004F36DB /* SnapKit */; };
+		D7CB332025069C80004F36DB /* HouseListModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB331F25069C80004F36DB /* HouseListModuleAssembly.swift */; };
+		D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332125069CBE004F36DB /* HouseListPresenter.swift */; };
+		D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332325069CD3004F36DB /* HouseListInteractor.swift */; };
+		D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332525069CE1004F36DB /* HouseListViewController.swift */; };
+		D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */; };
+		D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7CB32ED250696E3004F36DB /* kupivodu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kupivodu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CB32F0250696E3004F36DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7CB32F2250696E3004F36DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D7CB32F4250696E3004F36DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D7CB32F7250696E3004F36DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7CB32FA250696E3004F36DB /* kupivodu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kupivodu.xcdatamodel; sourceTree = "<group>"; };
 		D7CB32FC250696E7004F36DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7CB32FF250696E7004F36DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7CB3301250696E7004F36DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7CB331F25069C80004F36DB /* HouseListModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListModuleAssembly.swift; sourceTree = "<group>"; };
+		D7CB332125069CBE004F36DB /* HouseListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListPresenter.swift; sourceTree = "<group>"; };
+		D7CB332325069CD3004F36DB /* HouseListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListInteractor.swift; sourceTree = "<group>"; };
+		D7CB332525069CE1004F36DB /* HouseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewController.swift; sourceTree = "<group>"; };
+		D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListInteractorProtocols.swift; sourceTree = "<group>"; };
+		D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListPresenterProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CB330E25069816004F36DB /* SnapKit in Frameworks */,
+				D7CB330B250697E8004F36DB /* RxCocoa in Frameworks */,
+				D7CB3309250697E8004F36DB /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +70,123 @@
 		D7CB32EF250696E3004F36DB /* kupivodu */ = {
 			isa = PBXGroup;
 			children = (
-				D7CB32F0250696E3004F36DB /* AppDelegate.swift */,
-				D7CB32F2250696E3004F36DB /* SceneDelegate.swift */,
-				D7CB32F4250696E3004F36DB /* ViewController.swift */,
-				D7CB32F6250696E3004F36DB /* Main.storyboard */,
+				D7CB331525069979004F36DB /* ApplicationLayer */,
+				D7CB330F25069938004F36DB /* PresentationLayer */,
+				D7CB331025069943004F36DB /* ModelsLayer */,
+				D7CB33112506994D004F36DB /* ServiceLayer */,
+				D7CB331325069962004F36DB /* Resources */,
+			);
+			path = kupivodu;
+			sourceTree = "<group>";
+		};
+		D7CB330F25069938004F36DB /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331825069B69004F36DB /* Modules */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		D7CB331025069943004F36DB /* ModelsLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331225069956004F36DB /* CoreData */,
+			);
+			path = ModelsLayer;
+			sourceTree = "<group>";
+		};
+		D7CB33112506994D004F36DB /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		D7CB331225069956004F36DB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB32F9250696E3004F36DB /* kupivodu.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D7CB331325069962004F36DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				D7CB32FC250696E7004F36DB /* Assets.xcassets */,
 				D7CB32FE250696E7004F36DB /* LaunchScreen.storyboard */,
 				D7CB3301250696E7004F36DB /* Info.plist */,
-				D7CB32F9250696E3004F36DB /* kupivodu.xcdatamodeld */,
 			);
-			path = kupivodu;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7CB331525069979004F36DB /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331625069980004F36DB /* AppDelegate */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		D7CB331625069980004F36DB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB32F0250696E3004F36DB /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D7CB331825069B69004F36DB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331A25069C3A004F36DB /* HouseList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D7CB331A25069C3A004F36DB /* HouseList */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331B25069C4A004F36DB /* Assembly */,
+				D7CB331E25069C62004F36DB /* Presenter */,
+				D7CB331D25069C5C004F36DB /* Interactor */,
+				D7CB331C25069C58004F36DB /* View */,
+			);
+			path = HouseList;
+			sourceTree = "<group>";
+		};
+		D7CB331B25069C4A004F36DB /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB331F25069C80004F36DB /* HouseListModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D7CB331C25069C58004F36DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB332525069CE1004F36DB /* HouseListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D7CB331D25069C5C004F36DB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB332325069CD3004F36DB /* HouseListInteractor.swift */,
+				D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D7CB331E25069C62004F36DB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB332125069CBE004F36DB /* HouseListPresenter.swift */,
+				D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +205,11 @@
 			dependencies = (
 			);
 			name = kupivodu;
+			packageProductDependencies = (
+				D7CB3308250697E8004F36DB /* RxSwift */,
+				D7CB330A250697E8004F36DB /* RxCocoa */,
+				D7CB330D25069816004F36DB /* SnapKit */,
+			);
 			productName = kupivodu;
 			productReference = D7CB32ED250696E3004F36DB /* kupivodu.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +238,10 @@
 				Base,
 			);
 			mainGroup = D7CB32E4250696E3004F36DB;
+			packageReferences = (
+				D7CB3307250697E8004F36DB /* XCRemoteSwiftPackageReference "RxSwift" */,
+				D7CB330C25069816004F36DB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D7CB32EE250696E3004F36DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +258,6 @@
 			files = (
 				D7CB3300250696E7004F36DB /* LaunchScreen.storyboard in Resources */,
 				D7CB32FD250696E7004F36DB /* Assets.xcassets in Resources */,
-				D7CB32F8250696E3004F36DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,23 +269,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7CB32FB250696E3004F36DB /* kupivodu.xcdatamodeld in Sources */,
-				D7CB32F5250696E3004F36DB /* ViewController.swift in Sources */,
+				D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */,
+				D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */,
+				D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */,
+				D7CB332025069C80004F36DB /* HouseListModuleAssembly.swift in Sources */,
+				D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */,
 				D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */,
-				D7CB32F3250696E3004F36DB /* SceneDelegate.swift in Sources */,
+				D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D7CB32F6250696E3004F36DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7CB32F7250696E3004F36DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D7CB32FE250696E7004F36DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,7 +413,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LZJ6YD33X;
-				INFOPLIST_FILE = kupivodu/Info.plist;
+				INFOPLIST_FILE = kupivodu/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrtokii.kupivodu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,7 +432,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4LZJ6YD33X;
-				INFOPLIST_FILE = kupivodu/Info.plist;
+				INFOPLIST_FILE = kupivodu/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mrtokii.kupivodu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +467,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D7CB3307250697E8004F36DB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		D7CB330C25069816004F36DB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D7CB3308250697E8004F36DB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7CB3307250697E8004F36DB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		D7CB330A250697E8004F36DB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7CB3307250697E8004F36DB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		D7CB330D25069816004F36DB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D7CB330C25069816004F36DB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D7CB32F9250696E3004F36DB /* kupivodu.xcdatamodeld */ = {

@@ -6,10 +6,14 @@
 //  Copyright © 2020 Vitaliy Salnikov. All rights reserved.
 //
 
+import RxSwift
+
 protocol HouseListInteractorInput {
     
+    func test()
 }
 
 protocol HouseListInteractorOutput {
     
+    var state: Observable<HouseListInteractorState> { get }
 }

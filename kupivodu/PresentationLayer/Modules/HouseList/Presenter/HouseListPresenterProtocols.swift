@@ -6,6 +6,11 @@
 //  Copyright © 2020 Vitaliy Salnikov. All rights reserved.
 //
 
+import RxCocoa
+
 protocol HouseListPresenterOutput {
     
+    var loadingDriver: Driver<Bool> { get }
+    var errorDriver: Driver<String?> { get }
+    var houseListDriver: Driver<[HouseInfo]> { get }
 }

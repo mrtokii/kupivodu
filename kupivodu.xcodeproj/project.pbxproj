@@ -20,6 +20,9 @@
 		D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332525069CE1004F36DB /* HouseListViewController.swift */; };
 		D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */; };
 		D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */; };
+		D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB332E2506A2C6004F36DB /* HouseListInteractorState.swift */; };
+		D7CB33332506A373004F36DB /* HouseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33322506A373004F36DB /* HouseInfo.swift */; };
+		D7CB33362506A3F8004F36DB /* HouseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33352506A3F8004F36DB /* HouseList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		D7CB332525069CE1004F36DB /* HouseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListViewController.swift; sourceTree = "<group>"; };
 		D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListInteractorProtocols.swift; sourceTree = "<group>"; };
 		D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListPresenterProtocols.swift; sourceTree = "<group>"; };
+		D7CB332E2506A2C6004F36DB /* HouseListInteractorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseListInteractorState.swift; sourceTree = "<group>"; };
+		D7CB33322506A373004F36DB /* HouseInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseInfo.swift; sourceTree = "<group>"; };
+		D7CB33352506A3F8004F36DB /* HouseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 		D7CB331025069943004F36DB /* ModelsLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33302506A32C004F36DB /* PlainObjects */,
 				D7CB331225069956004F36DB /* CoreData */,
 			);
 			path = ModelsLayer;
@@ -174,8 +181,10 @@
 		D7CB331D25069C5C004F36DB /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33342506A3E6004F36DB /* Submodels */,
 				D7CB332325069CD3004F36DB /* HouseListInteractor.swift */,
 				D7CB332A25069F7B004F36DB /* HouseListInteractorProtocols.swift */,
+				D7CB332E2506A2C6004F36DB /* HouseListInteractorState.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -187,6 +196,22 @@
 				D7CB332C25069F96004F36DB /* HouseListPresenterProtocols.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D7CB33302506A32C004F36DB /* PlainObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33322506A373004F36DB /* HouseInfo.swift */,
+			);
+			path = PlainObjects;
+			sourceTree = "<group>";
+		};
+		D7CB33342506A3E6004F36DB /* Submodels */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33352506A3F8004F36DB /* HouseList.swift */,
+			);
+			path = Submodels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,13 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7CB33332506A373004F36DB /* HouseInfo.swift in Sources */,
 				D7CB32FB250696E3004F36DB /* kupivodu.xcdatamodeld in Sources */,
 				D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */,
 				D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */,
+				D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */,
 				D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */,
 				D7CB332025069C80004F36DB /* HouseListModuleAssembly.swift in Sources */,
 				D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */,
 				D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */,
+				D7CB33362506A3F8004F36DB /* HouseList.swift in Sources */,
 				D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

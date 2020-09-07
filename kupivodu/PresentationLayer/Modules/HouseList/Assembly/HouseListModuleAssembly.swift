@@ -15,8 +15,8 @@ enum HouseListModuleAssembly {
         let view = HouseListViewController()
         
         presenter.bindInteractor(interactor)
-        view.bindPresenter(presenter)
         
+        view.presenterOutput = presenter
         view.actionInput = interactor
         
         return view

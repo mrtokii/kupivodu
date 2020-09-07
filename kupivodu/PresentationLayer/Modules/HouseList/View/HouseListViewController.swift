@@ -25,7 +25,25 @@ final class HouseListViewController: UIViewController {
     
     var actionInput: HouseListInteractorInput?
     var presenterOutput: HouseListPresenterOutput?
-
+    
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupTableView()
+        setupUI()
+        updateTable()
+        
+        if let presenter = presenterOutput {
+            bindPresenter(presenter)
+        }
+        
+        actionInput?.reload()
+    }
+    
+    // MARK: - Private Methods
+    
     private func bindPresenter(_ output: HouseListPresenterOutput) {
         
         output.loadingDriver
@@ -47,30 +65,12 @@ final class HouseListViewController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    // MARK: - Life Cycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupTableView()
-        setupUI()
-        updateTable()
-        
-        if let presenter = presenterOutput {
-            bindPresenter(presenter)
-        }
-        
-        actionInput?.reload()
-    }
-    
     private func setupUI() {
         
         view.backgroundColor = .white
         view.addSubview(tableView)
         view.addSubview(loadingView)
-        
-        tableView.separatorStyle = .none
-        
+                
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -98,6 +98,8 @@ final class HouseListViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension HouseListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,11 +108,11 @@ extension HouseListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.houseCellId) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.houseCellId) as? HouseInfoCell else {
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = dataSource[indexPath.row].address
+        cell.configure(with: dataSource[indexPath.row])
         
         return cell
     }

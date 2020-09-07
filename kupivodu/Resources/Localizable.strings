@@ -6,6 +6,6 @@
   Copyright © 2020 Vitaliy Salnikov. All rights reserved.
 */
 
-"house_info_building" = "дом";
-"house_info_part" = "корпус";
-"house_info_letter" = "литер";
+"house_info_building" = "дом %@";
+"house_info_part" = "корпус %@";
+"house_info_letter" = "литер %@";

@@ -8,5 +8,15 @@
 
 extension String {
     
+    var withoutWhitespace: String {
+        trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+// MARK: - Constants
+
+extension String {
+    
     static let empty = ""
+    static let space = " "
 }

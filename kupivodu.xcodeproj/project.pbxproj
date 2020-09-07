@@ -48,6 +48,12 @@
 		D7CB337F2506DD87004F36DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7CB337E2506DD87004F36DB /* Localizable.strings */; };
 		D7CB33822506DDD9004F36DB /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33812506DDD9004F36DB /* String+Localization.swift */; };
 		D7CB338E2506E1CF004F36DB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB338D2506E1CF004F36DB /* String+Extensions.swift */; };
+		D7CB33912506E357004F36DB /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33902506E357004F36DB /* UIView+Extensions.swift */; };
+		D7CB33932506E3CC004F36DB /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33922506E3CC004F36DB /* UIStackView+Extensions.swift */; };
+		D7CB33972506E46F004F36DB /* CGFloat+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33962506E46F004F36DB /* CGFloat+Appearance.swift */; };
+		D7CB33992506E564004F36DB /* UILabel+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33982506E564004F36DB /* UILabel+Factory.swift */; };
+		D7CB339B2506E5D9004F36DB /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB339A2506E5D9004F36DB /* UIFont+Extensions.swift */; };
+		D7CB33A12506E95A004F36DB /* HouseInfo+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +96,12 @@
 		D7CB337E2506DD87004F36DB /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D7CB33812506DDD9004F36DB /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		D7CB338D2506E1CF004F36DB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		D7CB33902506E357004F36DB /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D7CB33922506E3CC004F36DB /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		D7CB33962506E46F004F36DB /* CGFloat+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Appearance.swift"; sourceTree = "<group>"; };
+		D7CB33982506E564004F36DB /* UILabel+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Factory.swift"; sourceTree = "<group>"; };
+		D7CB339A2506E5D9004F36DB /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HouseInfo+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 		D7CB32EF250696E3004F36DB /* kupivodu */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB33942506E44E004F36DB /* Appearance */,
 				D7CB338B2506E1BB004F36DB /* Extensions */,
 				D7CB331525069979004F36DB /* ApplicationLayer */,
 				D7CB330F25069938004F36DB /* PresentationLayer */,
@@ -140,6 +153,7 @@
 		D7CB330F25069938004F36DB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB339D2506E5EA004F36DB /* Factories */,
 				D7CB331825069B69004F36DB /* Modules */,
 			);
 			path = PresentationLayer;
@@ -148,6 +162,7 @@
 		D7CB331025069943004F36DB /* ModelsLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB339E2506E940004F36DB /* Extensions */,
 				D7CB337B2506D99F004F36DB /* Errors */,
 				D7CB336C2506C562004F36DB /* NetworkResponses */,
 				D7CB33302506A32C004F36DB /* PlainObjects */,
@@ -475,6 +490,7 @@
 		D7CB338B2506E1BB004F36DB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D7CB338F2506E345004F36DB /* UIKit */,
 				D7CB338C2506E1C4004F36DB /* Swift */,
 			);
 			path = Extensions;
@@ -486,6 +502,56 @@
 				D7CB338D2506E1CF004F36DB /* String+Extensions.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		D7CB338F2506E345004F36DB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33902506E357004F36DB /* UIView+Extensions.swift */,
+				D7CB33922506E3CC004F36DB /* UIStackView+Extensions.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		D7CB33942506E44E004F36DB /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33952506E45F004F36DB /* Constants */,
+				D7CB339A2506E5D9004F36DB /* UIFont+Extensions.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		D7CB33952506E45F004F36DB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33962506E46F004F36DB /* CGFloat+Appearance.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D7CB339D2506E5EA004F36DB /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33982506E564004F36DB /* UILabel+Factory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D7CB339E2506E940004F36DB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB339F2506E949004F36DB /* PlainObjects */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D7CB339F2506E949004F36DB /* PlainObjects */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB33A02506E95A004F36DB /* HouseInfo+Extensions.swift */,
+			);
+			path = PlainObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,11 +643,16 @@
 				D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */,
 				D7CB335C2506C38A004F36DB /* JSONParameterEncoder.swift in Sources */,
 				D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */,
+				D7CB33912506E357004F36DB /* UIView+Extensions.swift in Sources */,
 				D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */,
+				D7CB33932506E3CC004F36DB /* UIStackView+Extensions.swift in Sources */,
+				D7CB339B2506E5D9004F36DB /* UIFont+Extensions.swift in Sources */,
 				D7CB33772506CCCC004F36DB /* ArchiveHelper.swift in Sources */,
+				D7CB33992506E564004F36DB /* UILabel+Factory.swift in Sources */,
 				D7CB332D25069F96004F36DB /* HouseListPresenterProtocols.swift in Sources */,
 				D7CB332025069C80004F36DB /* HouseListModuleAssembly.swift in Sources */,
 				D7CB33702506C7E9004F36DB /* HouseListEndpoint.swift in Sources */,
+				D7CB33A12506E95A004F36DB /* HouseInfo+Extensions.swift in Sources */,
 				D7CB338E2506E1CF004F36DB /* String+Extensions.swift in Sources */,
 				D7CB33822506DDD9004F36DB /* String+Localization.swift in Sources */,
 				D7CB332225069CBE004F36DB /* HouseListPresenter.swift in Sources */,
@@ -601,6 +672,7 @@
 				D7CB335B2506C38A004F36DB /* JSONResponseDecoder.swift in Sources */,
 				D7CB33682506C3A5004F36DB /* NetworkServiceConfiguration.swift in Sources */,
 				D7CB333E2506C012004F36DB /* LoadingView.swift in Sources */,
+				D7CB33972506E46F004F36DB /* CGFloat+Appearance.swift in Sources */,
 				D7CB335A2506C38A004F36DB /* ParameterEncoder.swift in Sources */,
 				D7CB33692506C3A5004F36DB /* NetworkService.swift in Sources */,
 				D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */,

@@ -6,15 +6,20 @@
 //  Copyright © 2020 Vitaliy Salnikov. All rights reserved.
 //
 
-final class HouseList: Equatable {
-    
-    static func == (lhs: HouseList, rhs: HouseList) -> Bool {
-        lhs.houses == rhs.houses
-    }
+final class HouseList {
     
     let houses: [HouseInfo]
     
     init(houses: [HouseInfo]) {
         self.houses = houses
+    }
+}
+
+// MARK: - Equatable
+
+extension HouseList: Equatable {
+    
+    static func == (lhs: HouseList, rhs: HouseList) -> Bool {
+        lhs.houses == rhs.houses
     }
 }

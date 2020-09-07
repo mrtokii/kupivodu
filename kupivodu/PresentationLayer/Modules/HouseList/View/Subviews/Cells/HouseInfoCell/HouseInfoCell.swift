@@ -11,12 +11,53 @@ import SnapKit
 
 final class HouseInfoCell: UITableViewCell {
     
+    private let stackView = UIStackView()
+    
+    private let cityLabel: UILabel = .create(font: .bold(size: 22))
+    private let streetLabel: UILabel = .create(font: .normal(size: 18))
+    private let addressLabel: UILabel = .create()
+    private let periodLabel: UILabel = .create()
+    
+    // MARK: - Public Inits
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Public Methods
+    
+    func configure(with model: HouseInfo) {
+        
+        cityLabel.text = model.city.withoutWhitespace
+        streetLabel.text = model.address.withoutWhitespace
+        addressLabel.text = model.buildingAddress
+        periodLabel.text = model.period
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setupUI() {
+        
+        contentView.addSubview(stackView)
+        
+        stackView.addArrangedSubviews(
+            cityLabel,
+            streetLabel,
+            addressLabel,
+            periodLabel
+        )
+        
+        stackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(CGFloat.defaultInset)
+        }
+        
+        stackView.axis = .vertical
+        stackView.alignment = .fill
     }
 }

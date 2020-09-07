@@ -8,9 +8,9 @@
 
 enum HouseListModuleAssembly {
     
-    static func createModule() -> HouseListViewController {
+    static func createModule(houseInfoService: HouseInfoService) -> HouseListViewController {
         
-        let interactor = HouseListInteractor()
+        let interactor = HouseListInteractor(houseInfoService: houseInfoService)
         let presenter = HouseListPresenter()
         let view = HouseListViewController()
         

@@ -59,6 +59,8 @@ final class HouseListViewController: UIViewController {
         if let presenter = presenterOutput {
             bindPresenter(presenter)
         }
+        
+        actionInput?.reload()
     }
     
     private func setupUI() {

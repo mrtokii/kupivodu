@@ -12,6 +12,9 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private let networkService = NetworkService(with: .base)
+    private lazy var houseInfoService = HouseInfoService(networkService: networkService)
+    
     var window: UIWindow?
     
     private(set) lazy var mainWindow: UIWindow = {
@@ -27,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        mainWindow.rootViewController = HouseListModuleAssembly.createModule()
+        mainWindow.rootViewController = HouseListModuleAssembly.createModule(houseInfoService: houseInfoService)
         
         return true
     }

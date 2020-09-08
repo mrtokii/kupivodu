@@ -69,6 +69,14 @@ final class HouseListViewController: UIViewController {
                 self?.updateTable()
             })
             .disposed(by: disposeBag)
+        
+        output.isCachedDriver
+            .drive(onNext: { [weak self] in
+                
+                // Color means the values are from local cache
+                self?.view.backgroundColor = $0 ? .cyan : .white
+            })
+            .disposed(by: disposeBag)
     }
     
     private func setupUI() {
@@ -77,6 +85,8 @@ final class HouseListViewController: UIViewController {
         
         view.backgroundColor = .white
         view.addSubviews(stateViews)
+        
+        tableView.backgroundColor = .clear
                 
         stateViews.forEach {
             $0.snp.makeConstraints { make in

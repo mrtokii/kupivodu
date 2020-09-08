@@ -13,13 +13,15 @@ import RxCocoa
 final class HouseListInteractor {
     
     private let houseInfoService: HouseInfoService
+    private let cacheService: LocalCacheService
     
-    private let stateRelay = BehaviorRelay<HouseListInteractorState>(value: .remote(.init(houses: [])))
+    private let stateRelay = BehaviorRelay<HouseListInteractorState>(value: .content(.init(houses: []), isCached: false))
     
     // MARK: - Public Init
     
-    init(houseInfoService: HouseInfoService) {
+    init(houseInfoService: HouseInfoService, cacheService: LocalCacheService) {
         self.houseInfoService = houseInfoService
+        self.cacheService = cacheService
     }
     
     // MARK: - Public Methods
@@ -41,11 +43,18 @@ final class HouseListInteractor {
     // MARK: - Private Methods
     
     private func handle(error: Error) {
-        stateRelay.accept(.error(error))
+        
+        // Check if cache available
+        if let cache = cacheService.cache {
+            stateRelay.accept(.content(.init(houses: cache), isCached: true))
+        } else {
+            stateRelay.accept(.error(error))
+        }
     }
     
     private func handleListSuccess(_ list: [HouseInfo]) {
-        stateRelay.accept(.remote(.init(houses: list)))
+        stateRelay.accept(.content(.init(houses: list), isCached: false))
+        cacheService.updateHouseList(with: list)
     }
 }
 

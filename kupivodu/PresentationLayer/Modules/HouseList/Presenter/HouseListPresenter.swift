@@ -14,6 +14,7 @@ final class HouseListPresenter {
     private let disposeBag = DisposeBag()
     
     private let loadingRelay = BehaviorRelay(value: false)
+    private let isCachedRelay = BehaviorRelay(value: false)
     private let errorRelay = BehaviorRelay<String?>(value: nil)
     private let houseListRelay = BehaviorRelay<[HouseInfo]>(value: [])
     
@@ -40,13 +41,24 @@ final class HouseListPresenter {
         
         output.state
             .compactMap { state -> [HouseInfo]? in
-                if case let .remote(list) = state {
-                    return list.houses
+                if case let .content(data) = state {
+                    return data.0.houses
                 } else {
                     return nil
                 }
             }
             .bind(to: houseListRelay)
+            .disposed(by: disposeBag)
+        
+        output.state
+            .compactMap { state -> Bool in
+                if case let .content(data) = state {
+                    return data.isCached
+                } else {
+                    return false
+                }
+            }
+            .bind(to: isCachedRelay)
             .disposed(by: disposeBag)
     }
 }
@@ -54,6 +66,10 @@ final class HouseListPresenter {
 // MARK: - Output
 
 extension HouseListPresenter: HouseListPresenterOutput {
+    
+    var isCachedDriver: Driver<Bool> {
+        isCachedRelay.asDriver()
+    }
     
     var loadingDriver: Driver<Bool> {
         loadingRelay.asDriver()

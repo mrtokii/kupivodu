@@ -43,6 +43,29 @@ extension HouseInfo {
         
         return String(format: .houseInfoPeriodFormat, startDateProcessed, endDateProcessed)
     }
+    
+    // MARK: - From Managed Object
+    
+    convenience init?(managedObject: HouseInfoObject) {
+        
+        guard
+            let city = managedObject.city,
+            let address = managedObject.address,
+            let building = managedObject.building,
+            let part = managedObject.part,
+            let letter = managedObject.letter,
+            let period = managedObject.period
+        else {
+            return nil
+        }
+        
+        self.init(city: city,
+                  address: address,
+                  building: building,
+                  part: part,
+                  letter: letter,
+                  period: period)
+    }
 }
 
 // MARK: - Helpers

@@ -10,6 +10,7 @@ import RxCocoa
 
 protocol HouseListPresenterOutput {
     
+    var isCachedDriver: Driver<Bool> { get }
     var loadingDriver: Driver<Bool> { get }
     var errorDriver: Driver<String?> { get }
     var houseListDriver: Driver<[HouseInfo]> { get }

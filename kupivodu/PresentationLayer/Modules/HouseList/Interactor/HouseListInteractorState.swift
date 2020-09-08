@@ -13,8 +13,12 @@ enum HouseListInteractorState: Equatable {
         switch (lhs, rhs) {
         case (.loading, .loading), (.error, .error):
             return true
-        case let (.remote(lhsList), (.remote(rhsList))) where lhsList == rhsList:
-            return true
+        case let (.content(lhsData), (.content(rhsData))):
+            if lhsData.0 == rhsData.0, lhsData.isCached == rhsData.isCached {
+                return true
+            } else {
+                return false
+            }
         default:
             return false
         }
@@ -22,5 +26,5 @@ enum HouseListInteractorState: Equatable {
     
     case loading
     case error(Error)
-    case remote(HouseList)
+    case content(HouseList, isCached: Bool)
 }

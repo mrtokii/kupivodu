@@ -1,5 +1,7 @@
 # Bilet already kupil
 
+<img src="https://user-images.githubusercontent.com/15659755/92472335-ff37bd00-f1e1-11ea-8c55-ae45ecaaf6c4.png" width="200"/>
+
 Приложение, отображающее сроки отключения горячей воды.
 
 Для того, чтобы получить данные, используется следующий метод API:

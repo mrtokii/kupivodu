@@ -22,6 +22,9 @@ struct KVDateFormatter {
     
     init(format: String) {
         formatter.dateFormat = format
+        
+        // Uncomment if system language is not Russian
+        // formatter.locale = Locale(identifier: "ru_RU")
     }
     
     // MARK: - Public Methods

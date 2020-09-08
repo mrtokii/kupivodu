@@ -31,7 +31,7 @@ final class HouseInfoService {
         networkService.request(HouseListEndpoint()) { [weak self] (result, error) in
             
             guard let file = result?.responseData.classifiers.first?.file else {
-                completion(.failure(error ?? NetworkError.network))
+                completion(.failure(NetworkError.network))
                 return
             }
             

@@ -44,14 +44,19 @@ final class HouseInfoCell: UITableViewCell {
     
     private func setupUI() {
         
-        contentView.addSubview(stackView)
-        
-        stackView.addArrangedSubviews(
+        let labels = [
             cityLabel,
             streetLabel,
             addressLabel,
             periodLabel
-        )
+        ]
+        
+        contentView.addSubview(stackView)
+        stackView.addArrangedSubviews(labels)
+        
+        labels.forEach {
+            $0.numberOfLines = 0
+        }
         
         stackView.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(CGFloat.defaultInset)

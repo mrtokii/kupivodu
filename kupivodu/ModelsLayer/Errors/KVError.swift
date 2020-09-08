@@ -10,3 +10,16 @@ enum KVError: Error {
     
     case archiveDecode
 }
+
+// MARK: - Description
+
+extension KVError {
+    
+    var localizedDescription: String {
+        
+        switch self {
+        case .archiveDecode:
+            return .globalErrorDescriptionUnarchive
+        }
+    }
+}

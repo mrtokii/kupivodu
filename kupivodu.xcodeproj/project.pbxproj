@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D77FB651250772A0001EE621 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FB650250772A0001EE621 /* PlaceholderView.swift */; };
+		D77FB653250772B2001EE621 /* PlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FB652250772B2001EE621 /* PlaceholderViewModel.swift */; };
+		D77FB65625077CB4001EE621 /* Error+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FB65525077CB4001EE621 /* Error+Description.swift */; };
 		D7CB32F1250696E3004F36DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F0250696E3004F36DB /* AppDelegate.swift */; };
 		D7CB32FB250696E3004F36DB /* kupivodu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7CB32F9250696E3004F36DB /* kupivodu.xcdatamodeld */; };
 		D7CB32FD250696E7004F36DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7CB32FC250696E7004F36DB /* Assets.xcassets */; };
@@ -58,6 +61,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D77FB650250772A0001EE621 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		D77FB652250772B2001EE621 /* PlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewModel.swift; sourceTree = "<group>"; };
+		D77FB65525077CB4001EE621 /* Error+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Description.swift"; sourceTree = "<group>"; };
 		D7CB32ED250696E3004F36DB /* kupivodu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kupivodu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7CB32F0250696E3004F36DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7CB32FA250696E3004F36DB /* kupivodu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = kupivodu.xcdatamodel; sourceTree = "<group>"; };
@@ -121,6 +127,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D77FB64D25077275001EE621 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D77FB64E25077281001EE621 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D77FB64E25077281001EE621 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7CB333C2506C002004F36DB /* LoadingView */,
+				D77FB64F25077286001EE621 /* PlaceholderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D77FB64F25077286001EE621 /* PlaceholderView */ = {
+			isa = PBXGroup;
+			children = (
+				D77FB650250772A0001EE621 /* PlaceholderView.swift */,
+				D77FB652250772B2001EE621 /* PlaceholderViewModel.swift */,
+			);
+			path = PlaceholderView;
+			sourceTree = "<group>";
+		};
+		D77FB65425077CA9001EE621 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D77FB65525077CB4001EE621 /* Error+Description.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		D7CB32E4250696E3004F36DB = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +195,7 @@
 		D7CB330F25069938004F36DB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				D77FB64D25077275001EE621 /* Common */,
 				D7CB339D2506E5EA004F36DB /* Factories */,
 				D7CB331825069B69004F36DB /* Modules */,
 			);
@@ -294,7 +335,6 @@
 		D7CB33372506B462004F36DB /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				D7CB333C2506C002004F36DB /* LoadingView */,
 				D7CB33382506B46E004F36DB /* Cells */,
 			);
 			path = Subviews;
@@ -544,6 +584,7 @@
 		D7CB339E2506E940004F36DB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D77FB65425077CA9001EE621 /* Error */,
 				D7CB339F2506E949004F36DB /* PlainObjects */,
 			);
 			path = Extensions;
@@ -661,6 +702,7 @@
 				D7CB33672506C3A5004F36DB /* NetworkServiceConfiguration+Defaults.swift in Sources */,
 				D7CB332B25069F7B004F36DB /* HouseListInteractorProtocols.swift in Sources */,
 				D7CB335C2506C38A004F36DB /* JSONParameterEncoder.swift in Sources */,
+				D77FB653250772B2001EE621 /* PlaceholderViewModel.swift in Sources */,
 				D7CB332425069CD3004F36DB /* HouseListInteractor.swift in Sources */,
 				D7CB33912506E357004F36DB /* UIView+Extensions.swift in Sources */,
 				D7CB332F2506A2C6004F36DB /* HouseListInteractorState.swift in Sources */,
@@ -681,6 +723,7 @@
 				D7CB33542506C38A004F36DB /* UrlProvider.swift in Sources */,
 				D7CB336A2506C3A5004F36DB /* NetworkResponseValidator.swift in Sources */,
 				D7CB336E2506C57B004F36DB /* HouseListResponse.swift in Sources */,
+				D77FB651250772A0001EE621 /* PlaceholderView.swift in Sources */,
 				D7CB337D2506D9B3004F36DB /* KVError.swift in Sources */,
 				D7CB33572506C38A004F36DB /* HTTPMethod.swift in Sources */,
 				D7CB33562506C38A004F36DB /* HTTPTask.swift in Sources */,
@@ -696,6 +739,7 @@
 				D7CB335A2506C38A004F36DB /* ParameterEncoder.swift in Sources */,
 				D7CB33692506C3A5004F36DB /* NetworkService.swift in Sources */,
 				D7CB332625069CE1004F36DB /* HouseListViewController.swift in Sources */,
+				D77FB65625077CB4001EE621 /* Error+Description.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,4 +15,10 @@ extension String {
     static let houseInfoLetter = NSLocalizedString("house_info_letter", comment: .empty)
     
     static let houseInfoPeriodFormat = NSLocalizedString("house_info_period_format", comment: .empty)
+    
+    static let errorPlaceholderTryAgain = NSLocalizedString("error_placeholder_try_again", comment: .empty)
+    
+    static let globalErrorDescriptionNetwork = NSLocalizedString("global_error_description_network", comment: .empty)
+    static let globalErrorDescriptionUnarchive = NSLocalizedString("global_error_description_unarchive", comment: .empty)
+    static let globalErrorDescriptionUnknown = NSLocalizedString("global_error_description_unknown", comment: .empty)
 }

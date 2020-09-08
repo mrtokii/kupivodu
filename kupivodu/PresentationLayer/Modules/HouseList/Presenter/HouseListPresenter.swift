@@ -28,9 +28,9 @@ final class HouseListPresenter {
             .disposed(by: disposeBag)
         
         output.state
-            .map { [weak self] state -> String? in
+            .map { state -> String? in
                 if case let .error(error) = state {
-                    return self?.errorText(of: error)
+                    return error.description
                 } else {
                     return nil
                 }
@@ -48,12 +48,6 @@ final class HouseListPresenter {
             }
             .bind(to: houseListRelay)
             .disposed(by: disposeBag)
-    }
-    
-    // MARK: - Private Methods
-    
-    private func errorText(of error: Error) -> String? {
-        return "Error!"
     }
 }
 

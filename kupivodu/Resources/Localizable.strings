@@ -10,3 +10,9 @@
 "house_info_part" = "корпус %@";
 "house_info_letter" = "литер %@";
 "house_info_period_format" = "%@ - %@";
+
+"error_placeholder_try_again" = "Попробовать еще";
+
+"global_error_description_network" = "Ошибка сети";
+"global_error_description_unarchive" = "Ошибка распаковки архива";
+"global_error_description_unknown" = "Неизвестная ошибка";

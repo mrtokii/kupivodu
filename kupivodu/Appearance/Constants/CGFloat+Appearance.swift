@@ -11,4 +11,6 @@ import CoreGraphics
 extension CGFloat {
     
     static let defaultInset: CGFloat = 16
+    
+    static let hugeInset: CGFloat = 32
 }

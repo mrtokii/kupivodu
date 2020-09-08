@@ -14,11 +14,23 @@ final class LoadingView: UIView {
     private let loadingIndicator = UIActivityIndicatorView(style: .gray)
     private let container = UIView()
     
+    // MARK: - Public Inits
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(container)
-        addSubview(loadingIndicator)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Private Methods
+    
+    private func setupUI() {
+        
+        addSubviews(container, loadingIndicator)
         
         container.snp.makeConstraints { make in
             make.size.equalTo(64)
@@ -34,9 +46,5 @@ final class LoadingView: UIView {
         container.alpha = 0.75
         
         loadingIndicator.startAnimating()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

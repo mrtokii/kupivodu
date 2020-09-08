@@ -18,6 +18,7 @@ final class HouseListViewController: UIViewController {
     private let tableView = UITableView()
     private let refreshControl = UIRefreshControl()
     private let loadingView = LoadingView()
+    private let errorPlaceholder = PlaceholderView()
     
     private var dataSource: [HouseInfo] = []
     
@@ -52,8 +53,13 @@ final class HouseListViewController: UIViewController {
             .disposed(by: disposeBag)
         
         output.errorDriver
-            .drive(onNext: { [weak self] _ in
-                //
+            .drive(onNext: { [weak self] in
+                if let errorDescription = $0 {
+                    self?.errorPlaceholder.configure(with: .init(error: errorDescription))
+                    self?.errorPlaceholder.isHidden = false
+                } else {
+                    self?.errorPlaceholder.isHidden = true
+                }
             })
             .disposed(by: disposeBag)
         
@@ -67,12 +73,15 @@ final class HouseListViewController: UIViewController {
     
     private func setupUI() {
         
+        let stateViews = [tableView, loadingView, errorPlaceholder]
+        
         view.backgroundColor = .white
-        view.addSubview(tableView)
-        view.addSubview(loadingView)
+        view.addSubviews(stateViews)
                 
-        tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        stateViews.forEach {
+            $0.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
         }
         
         loadingView.snp.makeConstraints { make in
@@ -80,6 +89,10 @@ final class HouseListViewController: UIViewController {
         }
         
         refreshControl.addTarget(self, action: #selector(reload), for: .valueChanged)
+        
+        errorPlaceholder.onRetry = { [weak self] in
+            self?.actionInput?.reload()
+        }
     }
     
     private func setupTableView() {

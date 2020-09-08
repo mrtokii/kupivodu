@@ -221,13 +221,13 @@
 			isa = PBXGroup;
 			children = (
 				D7CB33942506E44E004F36DB /* Appearance */,
-				D7CB338B2506E1BB004F36DB /* Extensions */,
 				D7CB331525069979004F36DB /* ApplicationLayer */,
-				D7CB330F25069938004F36DB /* PresentationLayer */,
+				D7CB338B2506E1BB004F36DB /* Extensions */,
 				D7CB331025069943004F36DB /* ModelsLayer */,
 				D7CB33412506C38A004F36DB /* NetworkLayer */,
-				D7CB33112506994D004F36DB /* ServiceLayer */,
+				D7CB330F25069938004F36DB /* PresentationLayer */,
 				D7CB331325069962004F36DB /* Resources */,
+				D7CB33112506994D004F36DB /* ServiceLayer */,
 			);
 			path = kupivodu;
 			sourceTree = "<group>";
@@ -245,8 +245,8 @@
 		D7CB331025069943004F36DB /* ModelsLayer */ = {
 			isa = PBXGroup;
 			children = (
-				D77FB65D2507868C001EE621 /* ManagedObject */,
 				D7CB339E2506E940004F36DB /* Extensions */,
+				D77FB65D2507868C001EE621 /* ManagedObject */,
 				D7CB337B2506D99F004F36DB /* Errors */,
 				D7CB336C2506C562004F36DB /* NetworkResponses */,
 				D7CB33302506A32C004F36DB /* PlainObjects */,
@@ -258,11 +258,11 @@
 		D7CB33112506994D004F36DB /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				D77FB65A2507810F001EE621 /* StorageService */,
-				D77FB65725077FFD001EE621 /* LocalCacheService */,
 				D7CB33742506CCB3004F36DB /* Helpers */,
 				D7CB33712506CC57004F36DB /* HouseInfoService */,
+				D77FB65725077FFD001EE621 /* LocalCacheService */,
 				D7CB335E2506C3A5004F36DB /* NetworkService */,
+				D77FB65A2507810F001EE621 /* StorageService */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -472,8 +472,8 @@
 		D7CB334E2506C38A004F36DB /* Coding */ = {
 			isa = PBXGroup;
 			children = (
-				D7CB334F2506C38A004F36DB /* ParameterEncoder.swift */,
 				D7CB33502506C38A004F36DB /* JSON */,
+				D7CB334F2506C38A004F36DB /* ParameterEncoder.swift */,
 				D7CB33532506C38A004F36DB /* ResponseDecoder.swift */,
 			);
 			path = Coding;

@@ -41,8 +41,8 @@ final class HouseListPresenter {
         
         output.state
             .compactMap { state -> [HouseInfo]? in
-                if case let .content(data) = state {
-                    return data.0.houses
+                if case let .content(list, _) = state {
+                    return list.houses
                 } else {
                     return nil
                 }
@@ -52,8 +52,8 @@ final class HouseListPresenter {
         
         output.state
             .compactMap { state -> Bool in
-                if case let .content(data) = state {
-                    return data.isCached
+                if case let .content(_, isCached) = state {
+                    return isCached
                 } else {
                     return false
                 }

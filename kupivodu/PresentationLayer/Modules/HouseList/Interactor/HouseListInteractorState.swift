@@ -13,8 +13,8 @@ enum HouseListInteractorState: Equatable {
         switch (lhs, rhs) {
         case (.loading, .loading), (.error, .error):
             return true
-        case let (.content(lhsData), (.content(rhsData))):
-            if lhsData.0 == rhsData.0, lhsData.isCached == rhsData.isCached {
+        case let (.content(lhsList, lhsIsCached), (.content(rhsList, rhsIsCached))):
+            if lhsList == rhsList, lhsIsCached == rhsIsCached {
                 return true
             } else {
                 return false
